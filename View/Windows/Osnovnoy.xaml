@@ -1,0 +1,24 @@
+﻿<Window x:Class="KoshevoiControl7.View.Windows.Osnovnoy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoshevoiControl7.View.Windows"
+        mc:Ignorable="d"
+        Title="Osnovnoy" Height="800" Width="1300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Image Source="/Resources/Image/SK.png" Grid.Column="1" Stretch="Fill"/>
+        <Image Source="/Resources/Image/SK2.png" Stretch="Fill" />
+        <Button Name="PerehodProizvod" Click="PerehodProizvod_Click" Content="Добавить производителя" Height="50" Width="250" FontSize="15" Margin="0 0 0 400"/>
+        <Button Name="PerehodTovar" Click="PerehodTovar_Click" Content="Добавить товар" Height="50" Width="250" FontSize="15" Margin="0 0 0 250"/>
+        <Button Name="PerehodSotrudnik" Click="PerehodSotrudnik_Click" Content="Добавить сотрудника" Height="50" Width="250" FontSize="15" Margin="0 0 0 100"/>
+        <Button Name="PerehodUchet" Click="PerehodUchet_Click" Content="Ведение учета" Height="50" Width="250" FontSize="15" Margin="0 50 0 0"/>
+        <Button Name="PerehodOtchet" Click="PerehodOtchet_Click" Content="Отчет" Height="50" Width="250" FontSize="15" Margin="0 200 0 0"/>
+        <Frame Name="Perehodi" Grid.Column="1"/>
+
+    </Grid>
+</Window>

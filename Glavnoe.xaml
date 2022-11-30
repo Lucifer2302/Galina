@@ -1,0 +1,21 @@
+﻿<Window x:Class="KoshevoiControl7.Glavnoe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoshevoiControl7"
+        mc:Ignorable="d"
+        Title="Перезагрузка" Height="800" Width="1300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Image Source="/Resources/Image/SK.png" Grid.Column="1" Stretch="Fill"/>
+        <Image Source="/Resources/Image/SK3.png" Stretch="Fill" />
+        <TextBlock Text="САЛОН КРАСОТЫ" Grid.Column="1" FontSize="50" TextDecorations="Underline" Foreground="#FFAE2ECC" FontWeight="Bold" Margin="60 90 20 20"/>
+        <TextBlock Text="ПЕРЕЗАГРУЗКА" Grid.Column="1" FontSize="60" TextDecorations="Underline" Foreground="#FFAE2ECC" FontWeight="Bold" Margin="90 200 20 20"/>
+        <Button Content="OK" Height="50" Width="150" FontWeight="Bold" FontSize="25" Margin="0 650 0 0" Click="Button_Click"/>
+
+    </Grid>
+</Window>

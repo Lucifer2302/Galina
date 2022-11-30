@@ -1,0 +1,17 @@
+﻿<Page x:Class="KoshevoiControl7.DobavlenieProizvoditelya"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KoshevoiControl7"
+      mc:Ignorable="d" 
+      d:DesignHeight="769" d:DesignWidth="969"
+      Title="DobavlenieProizvoditelya">
+
+    <Grid>
+        <Image Source="/Resources/Image/SK.png" Grid.Column="1" Stretch="Fill"/>
+        <TextBlock Text="Введите производителя" Grid.Column="1" FontSize="50" Margin="60 90 20 20"/>
+        <TextBox Width="500" Height="80" Margin="0 100 100 300"/>
+        <Button Content="Добавить" Height="40" Width="200" Margin="40 0 0 0"/>
+    </Grid>
+</Page>
