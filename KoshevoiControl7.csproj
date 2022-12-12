@@ -62,6 +62,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AppData\ModelHelper.cs" />
     <Compile Include="DobavlenieProizvoditelya.xaml.cs">
       <DependentUpon>DobavlenieProizvoditelya.xaml</DependentUpon>
     </Compile>
@@ -105,6 +106,9 @@
     <Compile Include="Model\Uchet.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Uchet.xaml.cs">
+      <DependentUpon>Uchet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\Osnovnoy.xaml.cs">
       <DependentUpon>Osnovnoy.xaml</DependentUpon>
     </Compile>
@@ -128,6 +132,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Uchet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Windows\Osnovnoy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

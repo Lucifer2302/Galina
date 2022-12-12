@@ -11,7 +11,7 @@
     <Grid>
         <Image Source="/Resources/Image/SK.png" Grid.Column="1" Stretch="Fill"/>
         <TextBlock Text="Введите производителя" Grid.Column="1" FontSize="50" Margin="60 90 20 20"/>
-        <TextBox Width="500" Height="80" Margin="0 100 100 300"/>
-        <Button Content="Добавить" Height="40" Width="200" Margin="40 0 0 0"/>
+        <TextBox Name="ProizvodTB" Width="500" Height="80" Margin="0 100 100 300"/>
+        <Button Name="ProizvodBtn" Click="ProizvodBtn_Click" Content="Добавить" Height="40" Width="200" Margin="40 0 0 0"/>
     </Grid>
 </Page>

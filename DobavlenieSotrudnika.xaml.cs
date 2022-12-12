@@ -24,5 +24,30 @@ namespace KoshevoiControl7
         {
             InitializeComponent();
         }
+
+
+        private void Dobavlenie_Click(object sender, RoutedEventArgs e)
+        {
+            string mes = "";
+            if (string.IsNullOrWhiteSpace(SotrudnikTB.Text))
+                mes += "Введите сотрудника\n";
+
+            if (mes != "")
+            {
+                MessageBox.Show(mes);
+                mes = "";
+                return;
+            }
+            Model.Sotrudnik sotrudnik = new Model.Sotrudnik() 
+            { 
+                Name = SotrudnikTB.Text 
+            };
+            AppData.ModelHelper.entities1.Sotrudnik.Add(sotrudnik);
+            AppData.ModelHelper.entities1.SaveChanges();
+            MessageBox.Show("Сотрудник добавлен");
+            SotrudnikTB.Text = "";
+
+
+        }
     }
 }

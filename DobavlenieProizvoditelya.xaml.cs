@@ -24,5 +24,27 @@ namespace KoshevoiControl7
         {
             InitializeComponent();
         }
+
+        private void ProizvodBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string mes = "";
+            if (string.IsNullOrWhiteSpace(ProizvodTB.Text))
+                mes += "Введите Производителя\n";
+
+            if (mes != "")
+            {
+                MessageBox.Show(mes);
+                mes = "";
+                return;
+            }
+            Model.Proizvoditel proizvoditel = new Model.Proizvoditel()
+            {
+                Name = ProizvodTB.Text
+            };
+            AppData.ModelHelper.entities1.Proizvoditel.Add(proizvoditel);
+            AppData.ModelHelper.entities1.SaveChanges();
+            MessageBox.Show("Производитель добавлен");
+            ProizvodTB.Text = "";
+        }
     }
 }

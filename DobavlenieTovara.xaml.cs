@@ -23,6 +23,43 @@ namespace KoshevoiControl7
         public DobavlenieTovara()
         {
             InitializeComponent();
+            AppData.ModelHelper.entities1 = new Model.Koshevoi_SalonEntities1();
+            CmbProizvod.SelectedValuePath = "ID";
+            CmbProizvod.DisplayMemberPath = "Name";
+            CmbProizvod.ItemsSource = AppData.ModelHelper.entities1.Proizvoditel.ToList();
+
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string mes = "";
+            if (string.IsNullOrWhiteSpace(TovarTB.Text))
+                mes += "Введите Товар\n";
+
+            if (string.IsNullOrWhiteSpace(CmbProizvod.Text))
+
+                mes += "Выберите Производителя\n";
+
+            if (mes != "")
+            {
+                MessageBox.Show(mes);
+                mes = "";
+                return;
+            }
+            Model.Material material = new Model.Material()
+            {
+                Name = TovarTB.Text,
+                Proizvoditel = CmbProizvod.SelectedItem as Model.Proizvoditel
+
+            };
+            AppData.ModelHelper.entities1.Material.Add(material);
+            AppData.ModelHelper.entities1.SaveChanges();
+            MessageBox.Show("Товар добавлен");
+            TovarTB.Text = "";
+
+
+ 
         }
     }
 }

@@ -30,7 +30,7 @@ namespace KoshevoiControl7.View.Windows
 
         private void PerehodUchet_Click(object sender, RoutedEventArgs e)
         {
-
+            Perehodi.Navigate(new Uchet());   
         }
 
         private void PerehodSotrudnik_Click(object sender, RoutedEventArgs e)

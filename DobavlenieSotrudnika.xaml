@@ -11,8 +11,8 @@
     <Grid>
         <Image Source="/Resources/Image/SK.png" Stretch="Fill"/>
         <TextBlock Text="Введите сотрудника" FontSize="50" Margin="60 90 20 20"/>
-        <TextBox Width="500" Height="80" Margin="0 100 100 300"/>
-        <Button Content="Добавить" Height="40" Width="200" Margin="40 0 0 0"/>
+        <TextBox FontSize="30" Name="SotrudnikTB" Width="500" Height="80" Margin="0 100 100 300"/>
+        <Button Content="Добавить" Name="Dobavlenie" Click="Dobavlenie_Click"  Height="40" Width="200" Margin="40 0 0 0"/>
 
     </Grid>
 </Page>
